@@ -11,12 +11,7 @@ package alumno;
  */
 public class Alumno {
     
-    private int id;
-    private String apellidoNombre; 
-    private String email;
-    private float promedio;
-    private int notasIngreso[];
-    private String direccion;
+    
     
 
     /**
@@ -27,7 +22,6 @@ public class Alumno {
         
         
     }
-    
     
     
 }

@@ -11,75 +11,122 @@ package Alumno;
  */
 public class alumnos 
 {
-    private int id;
-    private String apellidoNombre; 
-    private String email;
-    private float promedio;
-    private int notasIngreso[];
-    private String direccion;
+    private int _id;
+    private String _apellidoNombre; 
+    private String _email;
+    private float _promedio;
+    private int _notasIngreso[];
+    private String _direccion;
     
 
 
 public int getId()
     {
-        return this.id;
+        return this._id;
     }
     
     public String getNombre()
     {
-        return this.apellidoNombre;
+        return this._apellidoNombre;
     }
     
     public String getEmail()
     {
-        return this.email;
+        return this._email;
     }
     
     public float getPromedio()
     {
-        return this.promedio;
+        return this._promedio;
     }
     
     public String getDireccion()
     {
-        return this.direccion;
+        return this._direccion;
     }
     
-    public void alumno()
+    public void setId(int _id)
     {
-        this.notasIngreso = new int[5];
+        this._id = _id;
     }
     
-    public void alumno(int id, String apellidoNombre)
+    public void setApellidoNombre(String _apellidoNombre)
     {
-        //this();
-        this.id = id;
-        this.apellidoNombre = apellidoNombre;
-            
+        this._apellidoNombre = _apellidoNombre;
     }
     
-    public void alumno(int id, String apellidoNombre, String email)
+    public void setEmail(String _email)
     {
-        //this();
-        this.id = id;
-        this.apellidoNombre = apellidoNombre;
-        this.email = email;
+        this._email = _email;
     }
     
-    public void alumno(int id, String apellidoNombre, String email, Float promedio)
+    public void setPromedio(float _promedio)
     {
-        this.id = id;
-        this.apellidoNombre = apellidoNombre;
-        this.email = email;
-        this.promedio = promedio;
+        this._promedio = _promedio;
     }
+    
+    public void setDireccion(String _direccion)
+        {
+            this._direccion = _direccion;
+        }
+    
+    public void setNotasIngreso(int[] _notasIngreso)
+    {
+        this._notasIngreso = _notasIngreso;
+    }
+    
+    
+    public alumnos()
+    {
+        this._notasIngreso = new int[5];
+    }
+        
 
-    public void alumno(int id, String apellidoNombre, String email, Float promedio, String direccion)
+    public alumnos(int id, String apellidoNombre, String email, float promedio, int[] notasIngreso, String direccion)
     {
-        this.id = id;
-        this.apellidoNombre = apellidoNombre;
-        this.email = email;
-        this.promedio = promedio;
-        this.direccion = direccion;
+        this._id = id;
+        this._apellidoNombre = apellidoNombre;
+        this._direccion
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    public String Alumno()
+    {
+        Alumnos alum = new alumno();
+        Alumnos alum1 = new alumno();
+        Alumnos alum2 = new alumno();
+    }
+    
+    public float calcularPromedio()
+    {
+        
+    }
+    
+    public String alumnoString()
+    {
+        int i;
+                
+        String cadena = null;
+        cadena = this._id + this._apellidoNombre + this._email + this._direccion;
+        StringBuilder cadena = new StringBuilder;
+        cadena.append(this._apellidoNombre);
+        
+        /*StringBuffer buffer = new StringBuffer();
+        buffer.append("Nombre: ").append(this._apellidoNombre);*/
+        
+        
+        for(int nota : this._notasIngreso)
+        {
+            cadena+=" " + nota;
+        }
+        
+       // cadena += this._notasIngreso;
+        return cadena.toString();
     }
 }
